@@ -1,0 +1,45 @@
+{% extends 'base1.html.twig' %}
+
+{% block title %}Product index{% endblock %}
+{% block stylesheets %}
+      <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.css" />
+      <link href="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/core.js">
+      
+      <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous">
+      </script>
+       <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+      <link rel="stylesheet" href="/asset/home.css">
+      
+      {% endblock %}
+
+{% block body %}
+    
+<div class="container" >
+            <div class="row">
+    <div class="column">
+        {% for product in products %}
+           <div class="card" style="width: 18rem;">
+            <a class="" href="{{ path('clothes', {'id': product.id}) }}">
+                        <img class="card-img-top" src="{{ asset('uploads/' ~ product.photo) }}" alt="image">
+                    </a>
+                <h5 class="card-title">{{ product.name }}</h5>
+                <h5 class="card-title">{{ product.price }}$</h5>
+                <h5 class="card-title">{{ product.amount }}</h5>
+                <h5 class="card-title">{{ product.description }}</h5>
+               
+                     </div>
+        {% endfor %}
+ </div>
+</div>
+</div>
+
+</div>
+{% endblock %}
+ 
+
+  
+    
+  

@@ -1,0 +1,3 @@
+#home:
+    #path: /category/{categoryRepository}/{id}
+    #controller: App\Controller\HomeController::home

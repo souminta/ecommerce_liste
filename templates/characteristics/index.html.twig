@@ -1,0 +1,38 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Characteristics index{% endblock %}
+
+{% block body %}
+    <h1>Characteristics index</h1>
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Name</th>
+                <th>Value</th>
+                <th>Product</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for characteristic in characteristics %}
+            <tr>
+                <td>{{ characteristic.id }}</td>
+                <td>{{ characteristic.name }}</td>
+                <td>{{ characteristic.value }}</td>
+                <td>{{ characteristic.product.name }}</td>
+                <td>
+                    <a class="btn btn-lg btn-primary" href="{{ path('characteristics_show', {'id': characteristic.id}) }}">show</a>
+                    <a class="btn btn-lg btn-primary" href="{{ path('characteristics_edit', {'id': characteristic.id}) }}">edit</a>
+                </td>
+            </tr>
+        {% else %}
+            <tr>
+                <td colspan="5">no records found</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <a class="btn btn-lg btn-primary" href="{{ path('characteristics_new') }}">Create new</a>
+{% endblock %}

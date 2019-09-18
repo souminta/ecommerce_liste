@@ -1,0 +1,44 @@
+body{
+	background-color: #ADD8E6;
+	justify-content: all;
+}
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  text-align: center;
+  background-color: #f1f1f1;
+	margin: 1%;
+  width: 50px;
+
+}
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+
+}
+.row {margin: 0 -50px;
+
+  }
+.column {
+ float: left;
+ display: flex;
+	width: 80%;
+  padding: 0 10px; margin: 40px;
+}
+.card-img-top{
+	width: 150px;
+	height: 200px;
+
+
+}
+.card:hover{
+	background-color: #778899;
+}
+@media screen and (max-width: 600px) {
+  .column {
+    width: 100%;
+    display: block;
+    margin-bottom: 20px;
+  }
+}
+

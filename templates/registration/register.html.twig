@@ -1,0 +1,40 @@
+{% extends 'base1.html.twig' %}
+{% block content %}
+
+<title>Register</title>
+{% block stylesheets %}
+      <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.css" />
+      <link href="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/core.js">
+      
+      <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous">
+      </script>
+       <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+     <link rel="stylesheet" href="/asset/register.css">
+      
+      {% endblock %}
+{% block body %}
+
+<div class="container">
+    <div class="text-center">
+        <div class="card text-white bg-secondary mb-3" style="max-width: 20rem;">
+            <h1>Register</h1>
+    <p class="card-text">{{ form_start(registrationForm) }}
+        {{ form_row(registrationForm.email) }}
+        {{ form_row(registrationForm.plainPassword) }}
+        {{ form_row(registrationForm.firstname) }}
+        {{ form_row(registrationForm.lastname) }}
+        {{ form_row(registrationForm.address) }}</p>
+
+        <button class="btn btn-lg btn-primary">Register</button>
+    {{ form_end(registrationForm) }}
+    <a href="login">Vous avez déja un Compte?</a>
+        </div>
+    </div>
+</div>
+    {% endblock %}
+    
+{% endblock %}
+
+
